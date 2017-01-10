@@ -483,7 +483,7 @@ Note: if you are using a `<paper-drawer-panel>`, it might be wise to use the fol
 
         _computeTransition: function(factor) {
           var duration = factor * this.transitionDuration;
-          if (this.maximumTransitionDuration) {
+          if (this.maximumTransitionDuration !== false) {
             duration = Math.min(this.maximumTransitionDuration, duration);
           }
           return 'transform ' + duration + 'ms ' + this.transitionTimingFunction;
